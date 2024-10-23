@@ -2,7 +2,7 @@
 
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
-
+#include "lib.h"
 
 
 int main() {
@@ -60,6 +60,11 @@ int main() {
         std::cout << sizeof(float *) << std::endl;
         std::cout << sizeof(double *) << std::endl;
 
+        //测试 调另一个cpp中的方法
+        int aatest=1;
+        int bbtest=1;
+        int cctest= add(aatest,bbtest);
+        std::cout<<"add cout "<<cctest;
 
         // 初始化控制台日志器
         spdlog::info("Welcome to spdlog!");
